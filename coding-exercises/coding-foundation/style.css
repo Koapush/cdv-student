@@ -1,0 +1,25 @@
+body{
+  background-color: black;
+}
+
+#input{    /* input div */
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  width: 300px;
+  height: 50px;
+}
+
+#display{    /* div displaying squares*/
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+#display div{    /* squares */
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  transition: all 1s;
+}
