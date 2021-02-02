@@ -1,8 +1,15 @@
+body{
+  /* background-color: #c9cbff; */
+  background-color: #dbc6eb;
+}
 
 #background{
   display: inline-block;
-  vertical-align: top;
-  position:relative;
+  /* position:relative; */
+  position:absolute;
+  /* top:0; */
+  left:50%;
+  transform: translate(-50%,0);
   height: 836px;
   width: 800px;
   background-image: url('ab.jpg');
@@ -11,28 +18,39 @@
   opacity: 90%
 }
 
-
 h1 {
   color: purple;
+  /* display: flex; */
   text-align: center;
   font-family: Orbitron;
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: bold
 }
 
 #container{
-  margin-top: 141px;
+  display: block;
+  margin-top: 142px;
   margin-left: 174px;
+  /* position:absolute;
+  top:50%;
+  left:50%;
+  transform: (-50%, -50%); */
 }
 
 .bar{
-  height: 41px;
+  height: 40.5px;
   background-color: #6930c3;
-  background: linear-gradient(to right, #9966ff 0%, #6600cc 70%);
+  background: linear-gradient(to right, #9966ff 30%, #6600cc 80%);
   opacity: 0.8;
   width: 110px;
   padding-left: 5.5px;
   /* margin-bottom: 3px; */
 }
+
+.bar:hover {
+  background: white;
+}
+
 
 .bar p{
   color: white;
