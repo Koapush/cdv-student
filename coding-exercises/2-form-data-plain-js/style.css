@@ -1,0 +1,45 @@
+
+#background{
+  display: inline-block;
+  vertical-align: top;
+  position:relative;
+  height: 836px;
+  width: 800px;
+  background-image: url('ab.jpg');
+  background-size: 836px 585px;
+  background-repeat: no-repeat;
+  opacity: 90%
+}
+
+
+h1 {
+  color: purple;
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 30px;
+}
+
+#container{
+  margin-top: 141px;
+  margin-left: 174px;
+}
+
+.bar{
+  height: 41px;
+  background-color: #6930c3;
+  background: linear-gradient(to right, #9966ff 0%, #6600cc 70%);
+  opacity: 0.8;
+  width: 110px;
+  padding-left: 5.5px;
+  /* margin-bottom: 3px; */
+}
+
+.bar p{
+  color: white;
+  font-family: Orbitron;
+  font-size: 12px;
+  margin-top: 8px;
+  opacity: 1;
+  display: block;
+  font-weight: bold;
+}
