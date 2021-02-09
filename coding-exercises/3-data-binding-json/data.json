@@ -1,0 +1,74 @@
+[
+    {
+        "MarkOrNot": 1,
+        "WhatTime": 12.40,
+        "HowLongSincePosted": 16,
+        "HowManyLikesAlready": 5,
+        "Who": "new classmate",
+        "TypeOfContent": "beautiful pictures",
+        "HowMuchILike": 4,
+        "Description": "express her love for the city"
+    },
+    {
+        "MarkOrNot": 1,
+        "WhatTime": 14.40,
+        "HowLongSincePosted": 1,
+        "HowManyLikesAlready": 0,
+        "Who": "old friend",
+        "TypeOfContent": "life",
+        "HowMuchILike": 3,
+        "Description": "about going to a market"
+    },
+    {
+        "MarkOrNot": 0,
+        "WhatTime": 19.26,
+        "HowLongSincePosted": 12,
+        "HowManyLikesAlready": 0,
+        "Who": "new classmate",
+        "TypeOfContent": "life",
+        "HowMuchILike": 1,
+        "Description": "about gathering with friends"
+    },
+
+
+    {
+        "MarkOrNot": 0,
+        "WhatTime": 22.16,
+        "HowLongSincePosted": 120,
+        "HowManyLikesAlready": 6,
+        "Who": "old friend",
+        "TypeOfContent": "life",
+        "HowMuchILike": 2,
+        "Description": "about gathering with friends"
+    },
+    {
+        "MarkOrNot": 0,
+        "WhatTime": 9.57,
+        "HowLongSincePosted": 76,
+        "HowManyLikesAlready": 5,
+        "Who": "new classmate",
+        "TypeOfContent": "life",
+        "HowMuchILike": 3,
+        "Description": "about good weather"
+    },
+    {
+        "MarkOrNot": 1,
+        "WhatTime": 2.48,
+        "HowLongSincePosted": 19,
+        "HowManyLikesAlready": 2,
+        "Who": "relative",
+        "TypeOfContent": "anxiety",
+        "HowMuchILike": 3,
+        "Description": "failed to fall into sleep"
+    },
+    {
+        "MarkOrNot": 1,
+        "WhatTime": 23.48,
+        "HowLongSincePosted": 54,
+        "HowManyLikesAlready": 9,
+        "Who": "new classmate",
+        "TypeOfContent": "sharing",
+        "HowMuchILike": 2,
+        "Description": "an English song"
+    }
+]

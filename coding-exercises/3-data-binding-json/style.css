@@ -1,0 +1,38 @@
+body{
+  background-color: lightblue;
+  width, height: 100%;
+  margin: 0;
+}
+
+h1 {
+  color: #005f6f;
+  /* display: flex; */
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: 5%;
+}
+
+h3 {
+  color: white;
+  /* display: flex; */
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+span{
+  color: #005f6f;
+  font-family: Orbitron;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+#viz{
+  position: fixed;
+  text-align: center;
+  height:100%;
+  width: 100%;
+}
