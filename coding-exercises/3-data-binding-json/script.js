@@ -3,8 +3,8 @@ console.log('hello');
 let viz = d3.select("#viz-container")
   .append("svg")
     .attr("id", "viz")
-    // .attr("width", 1000)
-    // .attr("height", 1000)
+    .attr("width", 1000)
+    .attr("height", 1000)
 ;
 
 // load data from the json file
@@ -46,11 +46,11 @@ function gotData(incomingData) {
 }
 
 function circlex(x) {
-  return x * 30 + 300;
+  return x * 30 + 200;
 }
 
 function circley(y) {
-  return y * 5 + 80;
+  return y * 5 + 100;
 }
 
 function radius(r) {
