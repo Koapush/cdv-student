@@ -11,7 +11,7 @@ h1 {
   font-family: Orbitron;
   font-size: 40px;
   font-weight: 900;
-  margin-top: 5%;
+  margin-top: 2.5%;
 }
 
 h3 {
@@ -31,6 +31,7 @@ span{
 }
 
 #viz{
+  margin-top: 0;
   position: fixed;
   text-align: center;
   height:100%;
