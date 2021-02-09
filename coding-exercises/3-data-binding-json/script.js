@@ -50,7 +50,7 @@ function circlex(x) {
 }
 
 function circley(y) {
-  return y * 5 + 30;
+  return y * 5;
 }
 
 function radius(r) {
