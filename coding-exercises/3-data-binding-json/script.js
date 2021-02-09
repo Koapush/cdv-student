@@ -46,7 +46,7 @@ function gotData(incomingData) {
 }
 
 function circlex(x) {
-  return x * 30 + 200;
+  return x * 30 + 150;
 }
 
 function circley(y) {
