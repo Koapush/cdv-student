@@ -4,7 +4,7 @@ let viz = d3.select("#viz-container")
   .append("svg")
     .attr("id", "viz")
     .attr("width", 1000)
-    .attr("height", 1000)
+    .attr("height", 750)
 ;
 
 // load data from the json file
