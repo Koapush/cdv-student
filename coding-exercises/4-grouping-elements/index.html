@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <title>Coding Exervise 3</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- we are including the d3.js library. We load it
+    right from the web into this html file. This allows us
+    to use all the functions that d3 has defines for
+    us in our own code. -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  </head>
+  <body>
+
+    <h2>Hover to See Descriptions</h2>
+    <!-- <h1>Marking <span>"Like"</span> on <span>WeChat</span> Moments</h1> -->
+    <!-- <h1>Marking "Like" on WeChat Moments</h1> -->
+    <!-- <h3><span>X:</span> Time; <span>Y:</span> Time since posted; <span>R:</span> Current number of likes <br>
+      <span>Stroke-width:</span> How much I like; <span>Color:</span> Whether I Mark as Like</h3> -->
+    <!-- we put this div into place. later we use d3/js to
+    inseret a <svg> elment into it in which we then build
+    out visualization -->
+    <div id="viz-container"></div>
+
+
+    <!-- here we incude out own javascript file in which we are
+    using many of the functions from the d3 library that we
+    have included in the <head> section -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
