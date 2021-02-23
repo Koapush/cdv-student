@@ -44,7 +44,7 @@ function circleStrokeWidth(d, i){
 
 function positionTranslate(d, i){
   let x = d.WhatTime * 60 + 50;
-  let y = d.HowLongSincePosted * 5 + 150;
+  let y = d.HowLongSincePosted * 5 + 100;
   return "translate(" + x + "," + y + ")";
 }
 
