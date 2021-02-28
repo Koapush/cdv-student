@@ -18,13 +18,15 @@ Zuboff argues that we barely benefit from surveillance capitalism since we are o
 
 ### Assignment
 In her influential book "[The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power](https://www.publicaffairsbooks.com/titles/shoshana-zuboff/the-age-of-surveillance-capitalism/9781610395694/)" (2019), Zuboff outlines what she calls "Surveillance Capitalism". It as a "*new economic order*", a "*mutation of capitalism*" in which human experience , captured as data, plays a central role.
-Please watch Zuboff's talk linked above and study the diagrams alongside.  
-Takes notes formulate short responses (250-400 words); the may structure your writingsusing the prompts below.  
+Please watch Zuboff's talk linked above and study the diagrams alongside.
+
+Takes notes formulate short responses (250-400 words); the may structure your writingsusing the prompts below.
+
 Prompts:
 >In your own words, what does Zuboff mean by "Surveillance Capitalism".
 
 >Is there aspects of Zuboff's ideas that...
-  - ...you were particularly surprised by?
-  - ...disagree with?
-  - ...spark associations with your own experience?
-  - ...you want to ask further questions about?
+> - ...you were particularly surprised by?
+> - ...disagree with?
+> - ...spark associations with your own experience?
+> - ...you want to ask further questions about?
