@@ -56,7 +56,7 @@ function main() {
         .style("stroke-dasharray",("50,30")) //虚线小方块长度,间隔
         .style("stroke-width",30)
         .style("opacity",0.7)
-        .style("stroke", "black")
+        .style("stroke", "#272c34")
         // .style("fill", "url(#linear-gradient)")
     ;
 
