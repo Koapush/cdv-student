@@ -1,0 +1,412 @@
+[
+    {
+        "markornot": 1,
+        "WhatTime": "12:4",
+        "HowLongSincePosted": 16,
+        "HowManyLikesAlready": 5,
+        "who": "Classmate",
+        "HowMuchILike": 8,
+        "typeofcontent": "picture",
+        "Description": "Xiamen City"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "14:4",
+        "HowLongSincePosted": 6,
+        "HowManyLikesAlready": 0,
+        "who": "Friend",
+        "HowMuchILike": 7,
+        "typeofcontent": "text",
+        "Description": "movie"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "19:26",
+        "HowLongSincePosted": 12,
+        "HowManyLikesAlready": 0,
+        "who": "Classmate",
+        "HowMuchILike": 2,
+        "typeofcontent": "picture",
+        "Description": "gather with friends"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "22:16",
+        "HowLongSincePosted": 280,
+        "HowManyLikesAlready": 9,
+        "who": "Friend",
+        "HowMuchILike": 4,
+        "typeofcontent": "picture",
+        "Description": "party night"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "3:18",
+        "HowLongSincePosted": 5,
+        "HowManyLikesAlready": 1,
+        "who": "Relative",
+        "HowMuchILike": 6,
+        "typeofcontent": "text",
+        "Description": "insomnia"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "23:59",
+        "HowLongSincePosted": 34,
+        "HowManyLikesAlready": 14,
+        "who": "Classmate",
+        "HowMuchILike": 4,
+        "typeofcontent": "song",
+        "Description": "Deca Joins"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "23:01",
+        "HowLongSincePosted": 40,
+        "HowManyLikesAlready": 6,
+        "who": "Classmate",
+        "HowMuchILike": 5,
+        "typeofcontent": "picture",
+        "Description": "selfie"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "9:27",
+        "HowLongSincePosted": 520,
+        "HowManyLikesAlready": 16,
+        "who": "Classmate",
+        "HowMuchILike": 5,
+        "typeofcontent": "video",
+        "Description": "boyfriend"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "14:06",
+        "HowLongSincePosted": 44,
+        "HowManyLikesAlready": 2,
+        "who": "Classmate",
+        "HowMuchILike": 5,
+        "typeofcontent": "text",
+        "Description": "Indian instructor"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "2:48",
+        "HowLongSincePosted": 70,
+        "HowManyLikesAlready": 6,
+        "who": "Relative",
+        "HowMuchILike": 8,
+        "typeofcontent": "text",
+        "Description": "essays"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "18:41",
+        "HowLongSincePosted": 20,
+        "HowManyLikesAlready": 3,
+        "who": "Classmate",
+        "HowMuchILike": 7,
+        "typeofcontent": "text",
+        "Description": "idols"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "20:49",
+        "HowLongSincePosted": 28,
+        "HowManyLikesAlready": 14,
+        "who": "Friend",
+        "HowMuchILike": 6,
+        "typeofcontent": "video",
+        "Description": "new year"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "21:53",
+        "HowLongSincePosted": 7,
+        "HowManyLikesAlready": 2,
+        "who": "Classmate",
+        "HowMuchILike": 5,
+        "typeofcontent": "text",
+        "Description": "weekend"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "0:41",
+        "HowLongSincePosted": 16,
+        "HowManyLikesAlready": 1,
+        "who": "Classmate",
+        "HowMuchILike": 8,
+        "typeofcontent": "picture",
+        "Description": "winter"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "0:58",
+        "HowLongSincePosted": 13,
+        "HowManyLikesAlready": 3,
+        "who": "Classmate",
+        "HowMuchILike": 7,
+        "typeofcontent": "picture",
+        "Description": "girlfriend"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "1:53",
+        "HowLongSincePosted": 20,
+        "HowManyLikesAlready": 1,
+        "who": "Classmate",
+        "HowMuchILike": 4,
+        "typeofcontent": "video",
+        "Description": "dance performance"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "13:27",
+        "HowLongSincePosted": 0,
+        "HowManyLikesAlready": 2,
+        "who": "Relative",
+        "HowMuchILike": 4,
+        "typeofcontent": "article",
+        "Description": "lego"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "11:4",
+        "HowLongSincePosted": 27,
+        "HowManyLikesAlready": 4,
+        "who": "Relative",
+        "HowMuchILike": 6,
+        "typeofcontent": "video",
+        "Description": "cute cousin"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "18:58",
+        "HowLongSincePosted": 4,
+        "HowManyLikesAlready": 0,
+        "who": "Teacher",
+        "HowMuchILike": 6,
+        "typeofcontent": "text",
+        "Description": "new year"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "19:41",
+        "HowLongSincePosted": 72,
+        "HowManyLikesAlready": 0,
+        "who": "Relative",
+        "HowMuchILike": 4,
+        "typeofcontent": "text",
+        "Description": "dinner"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "21:01",
+        "HowLongSincePosted": 15,
+        "HowManyLikesAlready": 0,
+        "who": "Teacher",
+        "HowMuchILike": 6,
+        "typeofcontent": "picture",
+        "Description": "new year"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "21:41",
+        "HowLongSincePosted": 16,
+        "HowManyLikesAlready": 4,
+        "who": "classmate",
+        "HowMuchILike": 6,
+        "typeofcontent": "article",
+        "Description": "exhibitions"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "23:5",
+        "HowLongSincePosted": 0,
+        "HowManyLikesAlready": 9,
+        "who": "classmate",
+        "HowMuchILike": 7,
+        "typeofcontent": "picture",
+        "Description": "new semester"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "11:21",
+        "HowLongSincePosted": 6,
+        "HowManyLikesAlready": 2,
+        "who": "Friend",
+        "HowMuchILike": 6,
+        "typeofcontent": "video",
+        "Description": "cycling"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "14:57",
+        "HowLongSincePosted": 60,
+        "HowManyLikesAlready": 25,
+        "who": "Friend",
+        "HowMuchILike": 6,
+        "typeofcontent": "picture",
+        "Description": "reflection on Covid-19 life"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "0:25",
+        "HowLongSincePosted": 24,
+        "HowManyLikesAlready": 2,
+        "who": "Classmate",
+        "HowMuchILike": 6,
+        "typeofcontent": "picture",
+        "Description": "gather with friends"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "10:25",
+        "HowLongSincePosted": 8,
+        "HowManyLikesAlready": 0,
+        "who": "Classmate",
+        "HowMuchILike": 7,
+        "typeofcontent": "text",
+        "Description": "weather"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "19:45",
+        "HowLongSincePosted": 18,
+        "HowManyLikesAlready": 0,
+        "who": "Classmate",
+        "HowMuchILike": 5,
+        "typeofcontent": "text",
+        "Description": "valentine"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "19:45",
+        "HowLongSincePosted": 9,
+        "HowManyLikesAlready": 2,
+        "who": "Classmate",
+        "HowMuchILike": 5,
+        "typeofcontent": "picture",
+        "Description": "selfie"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "15:55",
+        "HowLongSincePosted": 24,
+        "HowManyLikesAlready": 3,
+        "who": "Classmate",
+        "HowMuchILike": 6,
+        "typeofcontent": "picture",
+        "Description": "football game"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "15:44",
+        "HowLongSincePosted": 12,
+        "HowManyLikesAlready": 0,
+        "who": "know",
+        "HowMuchILike": 7,
+        "typeofcontent": "article",
+        "Description": "reading"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "21:17",
+        "HowLongSincePosted": 88,
+        "HowManyLikesAlready": 6,
+        "who": "Friend",
+        "HowMuchILike": 7,
+        "typeofcontent": "video",
+        "Description": "skiing"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "13:48",
+        "HowLongSincePosted": 25,
+        "HowManyLikesAlready": 2,
+        "who": "know",
+        "HowMuchILike": 6,
+        "typeofcontent": "picture",
+        "Description": "go to market"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "0:01",
+        "HowLongSincePosted": 13,
+        "HowManyLikesAlready": 3,
+        "who": "Classmate",
+        "HowMuchILike": 7,
+        "typeofcontent": "picture",
+        "Description": "new hairstyle"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "20:21",
+        "HowLongSincePosted": 11,
+        "HowManyLikesAlready": 16,
+        "who": "Chancellor",
+        "HowMuchILike": 8,
+        "typeofcontent": "picture",
+        "Description": "internship offer"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "9:33",
+        "HowLongSincePosted": 30,
+        "HowManyLikesAlready": 1,
+        "who": "Teacher",
+        "HowMuchILike": 8,
+        "typeofcontent": "picture",
+        "Description": "granny's word"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "8:55",
+        "HowLongSincePosted": 330,
+        "HowManyLikesAlready": 2,
+        "who": "Classmate",
+        "HowMuchILike": 7,
+        "typeofcontent": "song",
+        "Description": "guitar"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "8:37",
+        "HowLongSincePosted": 96,
+        "HowManyLikesAlready": 9,
+        "who": "Classmate",
+        "HowMuchILike": 6,
+        "typeofcontent": "text",
+        "Description": "oversleep and miss class"
+    },
+    {
+        "markornot": 0,
+        "WhatTime": "1:06",
+        "HowLongSincePosted": 19,
+        "HowManyLikesAlready": 6,
+        "who": "Classmate",
+        "HowMuchILike": 6,
+        "typeofcontent": "video",
+        "Description": "birthday party"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "21:15",
+        "HowLongSincePosted": 23,
+        "HowManyLikesAlready": 0,
+        "who": "Classmate",
+        "HowMuchILike": 6,
+        "typeofcontent": "video",
+        "Description": "fireworks"
+    },
+    {
+        "markornot": 1,
+        "WhatTime": "1:26",
+        "HowLongSincePosted": 30,
+        "HowManyLikesAlready": 0,
+        "who": "Classmate",
+        "HowMuchILike": 7,
+        "typeofcontent": "text",
+        "Description": "homework"
+    }
+]
