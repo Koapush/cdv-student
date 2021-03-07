@@ -13,11 +13,11 @@
 - Week 6: Presentation (Due Monday, Mar8)  
 
 ### Refection:
->What data did you choose to collect?
->How did you collect it, was was the routine?
->Why did you choose to visualize the data in this way?
->What can be seen in the visualization? Does it reveal something you didn't expect?
->Did you make crucial compromises? Which ones?
+>What data did you choose to collect?  
+>How did you collect it, was was the routine?  
+>Why did you choose to visualize the data in this way?  
+>What can be seen in the visualization? Does it reveal something you didn't expect?  
+>Did you make crucial compromises? Which ones?  
 >If this project had a larger scaler and wasn't designed for print, how would you imagine it to be?  
 
 As for my data zine project, I decided to collect my habits of marking likes on others’ WeChat moments. At the very first beginning, I was intended to collect the data of people’s different ways of wearing masks, which seems to be more a scientific research (with high requirement of processing all variables to make sense) than a daily observation of myself. Thanks to Gloria and Stefanie’s Dear Data project, I was greatly inspired and therefore decided to collect my marking habits, since I can more or less realize the fact that I tend not to mark likes on those already being marked by many other friends even if I very much like it. I believe it would be quite intriguing to have a close-up view on it.  
@@ -28,7 +28,7 @@ To take a more look at the visualization, some of the interesting observations a
 - Many of the data points are, at the first glance, not that big, which indicates my original awareness of marking moments with less likes already.
 Most of the y positions of the data points lie within the range of less than 100 minutes, meaning that I tend to mark likes on the moments that haven’t been posted for a long time (the longer, the bigger; the more time has already passed, the more likes it might possibly receive).
 - The inner color tends to be darker, somehow indicating that I tend to mark likes on moments with nice pictures (not sure yet).
-- 9AM, 3PM, 9PM, and specifically 1AM are some of the time periods with denser data points, implying that I browsed WeChat Moment frequently at those times (or maybe more friends tend to post moments hours before, so that I would mark likes on them).
+- 9AM, 3PM, 9PM, and specifically 1AM are some of the time periods with denser data points, implying that I browsed WeChat Moment frequently at those times (or maybe more friends tend to post moments hours before, so that I would mark likes on them).  
   - 9AM: browsing my phone on the shuttle bus (I take 8:45 shuttle every day)
   - 3PM: class ends - distraction time (understandable)
   - 9PM: distraction time? (Was not realizable before)
