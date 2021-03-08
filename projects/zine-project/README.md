@@ -2,7 +2,7 @@
 
 ### Screenshots and Links:
 - Link to the [live website](https://koapush.github.io/cdv-student/projects/zine-project/cover.html)  
-- Link to the [presentation](https://drive.google.com/drive/folders/1-xcdL686J2pgMc5AWjN4pIk2UaqPOO_z)  
+- Link to the [presentation](https://drive.google.com/file/d/1BCSxbmT-Gyg_ROcSA6JE-61TLaxrZm8S/view?usp=sharing)  
 - Screenshots:
 ![](screenshots/cover.png)
 ![](screenshots/middlespread.png)
