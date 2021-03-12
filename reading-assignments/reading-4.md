@@ -1,7 +1,8 @@
 # Reading 4 (Prediction & Uncertainty)
 
 ### Response
-**Prediction Systems / Applications**
+**Prediction Systems / Applications**  
+
 Three of the contemporary systems/applications that came into my mind are: consumer behavior prediction, earthquake prediction, and sports prediction.  
 
 Consumer behavior prediction: by collecting data on consumers’ choices, preferences, and past experience, retailers and businesses would be able to predict consumer behavior trends and to better reach new and existing customers. More informed decision would be made for the sake of profits and business development.  
@@ -10,7 +11,8 @@ Earthquake prediction is about the science of seismology. By collecting data on 
 
 As for the prediction on the outcome of sporting events, it gradually grows into a huge business highly related to sport betting. Data on players’ personal conditions, past experiences, and even recent exposure of scandals would all influence the outcome and are therefore collected and analyzed carefully. Most predictions base on algorithms and simulation models, which somehow relate to another key aspect to Prediction in general, that is, machine learning. The most tricky point differs from the previous two lies in the fact that such prediction process might even influences players’ performance during games for the sake of hidden profits. It is quite ironic yet unavoidable since everything heavily relies on human, which, to my understanding, very much echoes with the story in Minority Report.  
 
-**Reflections on “Algorithmic vs. Statistic Prediction”**
+**Reflections on “Algorithmic vs. Statistic Prediction”**  
+
 Algorithmic prediction and statistic prediction, such two different ways of prediction are clearly demonstrated in our materials. Minority Report tells an ironic story about predicting criminals through algorithmic “precogs”. Such method seems to very much advance in prediction mechanism using developed algorithms, yet it ends up with the outcome that those who believe in “precogs” unavoidably follow what they predict to keep it believable (to some extent echoes with the sports prediction listed before in terms of profits). On the other hand, the prediction based on statistics seems a little bit backward yet “all real” since it only foresee trends generating from past data. Nevertheless, Hannah Fry mentions the underlying “spurious effects”, meaning that “the more data that are collected, cross-referenced, and searched for correlations, the easier it becomes to reach false conclusions” - neither does statistic prediction work well. In this sense, how should we develop to predict more accurately? How should we deal with those issues that requires prediction? What is worth prediction, what is not?  
 
 Prediction, in any sense, is an achievement of developing science and technologies. By applying it to some important fields, we humans are therefore able to learn from past experiences and rules in order to benefits our lives. However, there are things beyond prediction. We should always be aware that not everything is predictable. Even though the discussion on human vs. machines lasts for long, it does make sense. What differs we humans from machines lies in the fact that we cannot be fully predicted - there exists emotion. It is emotion that derives us from regularized and predictable results and therefore requires to be understood only through our brains.
