@@ -76,11 +76,7 @@ function gotData(incomingData){
     }
   }
 
-  let yearExtent = d3.extent(incomingData, function(d, i){
-    return d.year;
-  });
-  // color scale
-  let opacityScale = d3.scaleLinear().domain(yearExtent).range([0.5, 1]);
+
 
 
   function getGroupLocation(d,i){
@@ -104,12 +100,6 @@ function gotData(incomingData){
       return "white"
     }
   }
-
-
-
-
-
-
 
 
 
@@ -165,15 +155,9 @@ function gotData(incomingData){
        })
     ;
 
-    enteringElements.attr('transform', getGroupLocation);
+    enteringElements.transition().duration(YEAR_TICK*2).attr('transform', getGroupLocation);
 
 
-
-    // take care of updating elements
-
-    // datagroups.transition().duration(500).ease(d3.easeLinear).attr("transform", getGroupLocation).attr("opacity", function (d) {
-    //   return opacityScale(d.year);
-    // });
     datagroups.transition().duration(YEAR_TICK).ease(d3.easeLinear).attr('transform', getGroupLocation);
 
 
