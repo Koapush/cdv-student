@@ -1,6 +1,6 @@
 ## Three Good Datasets
 
-1. [Sneaker Factories](http://manufacturingmap.nikeinc.com/#)  
+1. [Nike Manufacturing Map](http://manufacturingmap.nikeinc.com/#)  
 
 This is Nike, Inc.’s manufacturing map, which includes data on all factories and material suppliers to manufacture its products. With the content of country/region, address, the number of workers, percentage of female workers, etc, I might be able to analyze the data further to visualize factory information and related implications.
 
