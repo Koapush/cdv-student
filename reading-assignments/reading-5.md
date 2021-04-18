@@ -8,7 +8,9 @@ The podcast reminds me of the documentary [The Cleaners](https://www-filmplatfor
 With data prospering towards the emerging raw materials, various problems arise between data and humans, between algorithms and values, between efficiency and ethics. It then becomes rather difficult to trade-off and strike balance given the current various standpoints, not to mention huge potentials in machines are foreseeable to further realize without proper consideration on ethics. Artificial Intelligence such as ClearView is argued to conduct information collection and evaluation, which seems to be efficient to facilitate social credit system, yet huge risks are also apparent in terms of false recognitions and the according series of misjudgments. In all, so far I’m not able to come up with any “proper” ideas on either generating public data or processing/conducting supervision; what I can see as public says is the imbalance in almost all existing systems, therefore remaining careful evaluations in any sense.
 
 
-#### Material
+
+
+### Material
 ##### Read
 - [The Messy Truth About Social Credit](https://docs.google.com/document/d/1yi5y8stuTh4f3sycR12NcNZr4_u-jAU0Zq5HV-3gqOA/edit?usp=sharing), Shazeda Ahmed, 2019
 
