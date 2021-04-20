@@ -104,6 +104,7 @@ d3.json("countries.geojson").then(function(geoData){
           }
         })
         .on('mouseover',mouseOverCountry)
+        .on("mouseout",mouseOutCountry)
         // .attr("stroke", "white")
         // .attr("stroke-width", 8)
     ;
@@ -123,6 +124,11 @@ d3.json("countries.geojson").then(function(geoData){
           <br>${internetuserate.toFixed(2)}%
           </p>
           `)
+    }
+
+    function mouseOutCountry(d,i){
+      d3.select('#tooltip')
+        .style('display','none')
 
     }
 
