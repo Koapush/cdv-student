@@ -4,7 +4,14 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Lobster&family=Oswald:wght@500&display=swap" rel="stylesheet">
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
     <!-- see the script.js file for infor about this library: -->
@@ -14,50 +21,100 @@
   </head>
   <body>
     <section>
-
+      <div class="stickyDiv">
+        <div id="vizContainer1">
+        </div>
+      </div>
 
       <div class="scrollingContent">
         <div id="page1">
-          <div class="column">
+          <div class="column1">
             <div class="title">
-              <h1>SLEEP</h1>
-              <h1>VS. EXERCISE</h1>
-              <h3>JYOTI</h3>
-              <h3>2021 Spring</h3>
+              <h1>SLEEP <br><br> VS. EXERCISE</h1> <br>
+              <h3>JYOTI<br>2021 Spring</h3>
 
 
             </div>
           </div>
 
-          <div class="column">
+          <div class="column2">
             <div class="intro">
-              <p>In modern society, people are paying more and more attention to health problems, regarding sleep (50%) and exercise (40%) as two of the three main issues that have great impact on their overall health and wellbeing. </p>
-              <p>This project, thus, starts from National Sleep Foundation's Sleep in America Poll, aiming at revealing a more direct relationship between sleep and exercise via data visualization.</p>
+              <br><br><br>
+              <p >In modern society, people are paying more and more attention to health problems, regarding <u> sleep (50%) and exercise (40%) </u> as two of the three main issues that have great impact on their overall health and welbeing. </p>
+              <p>In this sense, starting from <u> National Sleep Foundation's</u> <i> Sleep in America Poll </i>, this project aims at revealing a more direct relationship between sleep and exercise via data visualization. </p>
             </div>
             <div class="inputbox">
-              <p>You may want to <button class="inputB">GENERATE</button> your own point... </p>
-              <p class="inputT">Select your age <select name="age">
-                <option disabled="disabled" hidden selected="selected" value> Choose </option>
+              <p> Feel free to input your own condition...</p>
+              <!-- <p>You may want to <button class="inputB">GENERATE</button> your own point... </p> -->
+              <p class="inputT"> ●    What's your age <select id="age">
+                <option disabled="disabled" hidden selected="selected" value> ... </option>
                 <option value="2329"> 23-29 </option>
                 <option value="3039"> 30-39 </option>
                 <option value="4049"> 40-49 </option>
-                <option value="5060"> 50-69 </option>
-              </select> </p>
-              <p class="inputT">When do you usually go to bed <select name="time">
-                <option disabled="disabled" hidden selected="selected" value> Choose </option>
-                <option value="2329"> 23-29 </option>
-                <option value="3039"> 30-39 </option>
-                <option value="4049"> 40-49 </option>
-                <option value="5060"> 50-69 </option>
-              </select> </p>
-              <p class="inputT">How long do you sleep on average <select name="time">
-                <option disabled="disabled" hidden selected="selected" value> Choose </option>
-                <option value="2329"> 23-29 </option>
-                <option value="3039"> 30-39 </option>
-                <option value="4049"> 40-49 </option>
-                <option value="5060"> 50-69 </option>
-              </select> </p>
-              <p>OR just <button class="inputB">CLICK</button> to browse the project:) </p>
+                <option value="5060"> 50-60 </option>
+                <option value="else"> else </option>
+              </select> ? <br> ●    When do you usually go to bed <select id="time">
+                <option disabled="disabled" hidden selected="selected" value> ... </option>
+                <option value="1"> 12:00 AM (Midnight) </option>
+                <option value="2"> 12:01 AM – 12:59 AM </option>
+                <option value="3"> 1:00 AM – 1:59 AM </option>
+                <option value="4"> 2:00 AM – 5:00 AM </option>
+                <option value="5"> 5:01 AM – 8:59 AM </option>
+                <option value="6"> 9:00 AM – 11:59 AM </option>
+                <option value="7"> 12:00 PM (Noon) – 6:59 PM </option>
+                <option value="8"> 7:00 PM – 7:59 PM </option>
+                <option value="9"> 8:00 PM – 8:59 PM </option>
+                <option value="10"> 9:00 PM – 9:14 PM </option>
+                <option value="11"> 9:15 PM – 9:29 PM </option>
+                <option value="12"> 9:30 PM – 9:44 PM </option>
+                <option value="13"> 9:45 PM – 9:59 PM </option>
+                <option value="14"> 10:00 PM – 10:14 PM </option>
+                <option value="15"> 10:15 PM – 10:29 PM </option>
+                <option value="16"> 10:30 PM – 10:44 PM </option>
+                <option value="17"> 10:45 PM – 10:59 PM </option>
+                <option value="18"> 11:00 PM – 11:14 PM </option>
+                <option value="19"> 11:15 PM – 11:29 PM </option>
+                <option value="20"> 11:30 PM – 11:44 PM </option>
+                <option value="21"> 11:45 PM – 11:59 PM </option>
+              </select> ? <br> ●    How long do you sleep on workdays on average <select id="duration">
+                <option disabled="disabled" hidden selected="selected" value> ... </option>
+                <option value="1"> 1 </option>
+                <option value="1.5"> 1.5 </option>
+                <option value="2"> 2 </option>
+                <option value="2.5"> 2.5 </option>
+                <option value="3"> 3 </option>
+                <option value="3.5"> 3.5 </option>
+                <option value="4"> 4 </option>
+                <option value="4.5"> 4.5 </option>
+                <option value="5"> 5 </option>
+                <option value="5.5"> 5.5 </option>
+                <option value="6"> 6 </option>
+                <option value="6.5"> 6.5 </option>
+                <option value="7"> 7 </option>
+                <option value="7.5"> 7.5 </option>
+                <option value="8"> 8 </option>
+                <option value="8.5"> 8.5 </option>
+                <option value="9"> 9 </option>
+                <option value="9.5"> 9.5 </option>
+                <option value="10"> 10 </option>
+                <option value="10.5"> 10.5 </option>
+                <option value="11"> 11 </option>
+                <option value="11.5"> 11.5 </option>
+                <option value="12"> 12 </option>
+                <option value="12.5"> 12.5 </option>
+                <option value="13"> 13 </option>
+                <option value="else"> less than 1 or more than 13 </option>
+              </select> ? <br> ●    Would you define yourself as a <select id="activity">
+                <option disabled="disabled" hidden selected="selected" value> ... </option>
+                <option value="1"> vigorous </option>
+                <option value="2"> moderate </option>
+                <option value="3"> light </option>
+                <option value="4"> none </option>
+              </select> exerciser ? </p> <br>
+              <!-- <p class="inputT">How long do you sleep on workdays on average <input type="text" name="" value="">? </p> -->
+              <p>... so that you could <button id="interactiveMode">SEE YOURSELF</button> later in the project. <br>
+              OR just <button id='browsingMode'>CLICK HERE</button> to browse it :) <br>
+              <br>P.S: Might need a few seconds to load the website after clicking the button.</p>
 
 
             </div>
@@ -65,68 +122,146 @@
 
 
         </div>
+
         <div id="page2">
-          <div class="text">
-            <h2>ABOUT SLEEP</h2>
-            <div>
-              <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-            </div>
-            <div>
-              <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-            </div>
-            <div>
-              <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-            </div>
+          <div class="text" id="div1">
+            <h2 id="sleep">ABOUT SLEEP</h2>
+              <p class="pureText buttonIns">
+                <button id="colorByAge" onclick="showAgeGroup();"> COLOR By Age </button> the lighter, the younger
+              </p>
+              <p class="pureText">● The elderly tend go to bed early and have shorter sleep duration compared with younger people.</p>
+              <br>
+
+              <p class="pureText buttonIns">
+                <button id="colorBySleepCondition" onclick="showSleepCondition();"> SHOW Sleep Condition </button> the bigger, the worse
+              </p>
+                <!-- <br><button id="colorByIdealSleepDuration" onclick="showExpectedSleepDuration();"> Expected Sleep Duration </button> -->
+              <p class="pureText">● The majority goes to bed at around 11 p.m, with an average sleep duration of 7~8 hours. <br></p>
+              <p class="pureText">● Shorter sleep duration often leads to worse sleep condition; Same for going to bed quite early in the morning.</p>
+              <p class="pureText">● People sleeping over 12 hours seem to be the group with best sleep quality in general.</p>
+              <br>
+              <p class="pureText buttonIns">
+                <button id="reset" onclick="reset();"> Reset </button> back to default
+              </p>
+
+
           </div>
 
         </div>
+
         <div id="page3">
           <div class="text">
-            <h2>ABOUT EXERCISE</h2>
-            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-            <p>texttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+            <h2 id="exercise">ABOUT EXERCISE</h2>
+
+            <p class="pureText buttonIns">
+              <button id="colorByAge" onclick="showAgeGroup();"> COLOR By Age </button> the lighter, the younger
+            </p>
+            <p class="pureText">● Young people tend to have more exercise compared with elder people.</p>
+            <br>
+
+            <p class="pureText buttonIns">
+              <button id="colorBySleepCondition" onclick="showSleepCondition();"> SHOW Sleep Condition </button> the bigger, the worse
+            </p>
+              <!-- <br><button id="colorByIdealSleepDuration" onclick="showExpectedSleepDuration();"> Expected Sleep Duration </button> -->
+            <p class="pureText">● The elderly seemingly have better sleep condition.</p>
+            <p class="pureText">● Vigorous exercisers seem to have better sleep condition; Non-exercisers are the opposite.<br></p>
+            <p class="pureText">● For non-exercisers, young people are suffering bad sleep condition more often than the elderly.</p>
+            <br>
+            <p class="pureText buttonIns">
+              <button id="reset" onclick="reset();"> Reset </button> back to default
+            </p>
+
+
           </div>
 
         </div>
+
       </div>
 
-      <div class="stickyDiv">
-        <div id="vizContainer1">
 
-        </div>
-      </div>
 
     </section>
 
 
-
-
     <section>
-
-
-      <div class="scrollingContent">
-        <div id="problem">
-          <div class="text">
-            <h2>SLEEPING PROBLEMS</h2>
-            <p><button>BTN1</button> fail to fall asleep</p>
-            <p><button>BTN2</button> wake up during night</p>
-            <p><button>BTN3</button> wake up feeling un-refreshed</p>
-            <p><button>BTN4</button> wake up too early and unable to get back to sleep</p>
-            <br>
-            <p>- Every night / Almost every night</p>
-            <p>- At least a few days / nights per week</p>
-            <p>- Rarely / Never</p>
-          </div>
-        </div>
-      </div>
-
       <div class="stickyDiv">
         <div id="vizContainer2">
 
         </div>
       </div>
 
+      <div class="scrollingContent">
+        <div id="page4">
+          <div class="text">
+            <h2 id="problems">SLEEPING PROBLEMS</h2>
+
+            <p class="pureText buttonIns">
+              <button id="sort"> SORT by exercise </button> the lighter, the less exercise <br>
+              <button id="failToSleep">Problem 1</button> fail to fall asleep <br>
+              <button id="wakeUp">Problem 2</button> wake up during night <br>
+              <button id="unfreshed">Problem 3</button> wake up feeling un-refreshed
+            </p>
+            <p class="pureText buttonIns">Frequency: Usually | Sometimes | Seldom</p>
+            <p class="pureText">● It's quite clear that vigorous exercisers always have the smallest percentage of suffering the above sleeping problems.</p>
+            <p class="pureText">● Moderate exercisers and light exercisers perform about the same level in terms of these sleeping problems, but non-exercisers without doubt suffer most.</p>
+            <p class="pureText">● In this sense, "more exercise, better sleep" seems to be a convincing conclusion according to this poll.</p>
+
+
+
+
+
+            <!-- <p> <button id="sort">BTN0</button> see trends  <br> <button id="failToSleep">line1</button> fail to fall asleep <br> <button id="wakeUp">line2</button> wake up during night <br> <button id="unfreshed">line3</button> wake up feeling un-refreshed</p> -->
+            <!-- <p><button id="tooEarly">line4</button> wake up too early and unable to get back to sleep</p> -->
+            <br>
+            <!-- <p>P.S: (left | middle | right) <br>Usually | Sometimes | Seldom</p> -->
+            <!-- <p>- Every night / Almost every night
+            <br>- At least a few days / nights per week
+            <br>- Rarely / Never</p> -->
+          </div>
+        </div>
+      </div>
+
+
+
+    </section>
+
+
+    <section>
+      <div class="scrollingContent">
+        <div id="page5">
+          <div class="left column">
+            <div class="title">
+              <h1>More <br> Exercise,</h1>
+              <h1>Better <br> Sleep:)</h1>
+            </div>
+          </div>
+
+          <div class="middle column">
+            <div class="conclusion row">
+              <h4>Conclusion</h4>
+            </div>
+            <div class="limitation row">
+              <h4>Limitation</h4>
+            </div>
+            <div class="reference row">
+              <h4>Reference</h4>
+            </div>
+          </div>
+
+          <div class="right column">
+            <div class="conclusion row">
+              conclusion
+            </div>
+            <div class="limitation row">
+              limitation
+            </div>
+            <div class="reference row">
+              reference
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
 
@@ -138,7 +273,7 @@
 
 
 
-    <!-- <script type="text/javascript" src="script.js"> -->
+    <script type="text/javascript" src="script.js">
 
     </script>
   </body>

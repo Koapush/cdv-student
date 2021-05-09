@@ -6,22 +6,6 @@ let interactiveMode;
 
 
 
-function calculate(incomingData){
-  num = 0;
-  for (i=0; i<incomingData.length; i++) {
-    if (incomingData[i].activityLevel == 4 && incomingData[i].frequencyFeelingUnrefreshed == 2) {
-      num +=1
-  }
-  }
-
-  console.log(num);
-};
-
-d3.json("data0.json").then(calculate);
-
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////below for viz1
 ///////////////////////////////////////////////////////////////////////////////////////////
 // https://stackoverflow.com/questions/16265123/resize-svg-when-window-is-resized-in-d3-js/25978286#25978286
@@ -141,10 +125,8 @@ let viz2 = d3.select("#vizContainer2")
 
 
 
-
 ///////////////////////////////////////////////////////////////////////////////////////////main
 function gotData(incomingData) {
-  ;
     ///////////////////////////////////////////////////////////////////////////////////////////viz1
 
     //////////////////////////////////// clean data
@@ -157,18 +139,8 @@ function gotData(incomingData) {
 				return false;
 			}
 		}
-
-
-
-
 		let filteredTimeToBedData = incomingData.filter(filterFunctionWithoutTimeToBed); // filteredTimeToBedData: filter out those datapoint.time_to_bed_workdays == refused/dont know
 		let transformedData = transformData(filteredTimeToBedData); // transformedData: datapoint.time_to_bed_workdays in time format for js
-
-    transformedData = transformedData.map(function(transformedData){
-      transformedData.key = Math.floor( Math.random() * 100000 );
-      return transformedData;
-    })
-
 
     if (interactiveMode) {
       var inputAge = document.getElementById('age').value;
@@ -241,7 +213,7 @@ function gotData(incomingData) {
     var exerciseText1 = vizGroup.append("text")
       .text("↑ Vigorous Exercisers")
       .attr('class', 'exerciseText')
-      .attr("transform", "translate("+(graphW/2-173)+","+(graphH/2-20)+")")
+      .attr("transform", "translate("+(graphW/2-180)+","+(graphH/2-20)+")")
       .attr('fill', '#e1bc91')
       .attr('visibility', 'hidden')
       .attr('font-family', 'Oswald')
@@ -289,7 +261,7 @@ function gotData(incomingData) {
 		let xAxisGroup = vizGroup.append('g').attr('class', 'xAxisGroup');
 		let xAxis = d3.axisBottom(timeScale).ticks(12);
     xAxisGroup.call(xAxis)
-		xAxisGroup.attr("color", "#d68060")
+		xAxisGroup.attr("color", "#e1bc91")
 			.attr("font-family", "Oswald")
 			.attr("font-size", "15px")
 			.attr("stroke-width", "3px")
@@ -316,7 +288,7 @@ function gotData(incomingData) {
 		let yAxisGroup = vizGroup.append("g").attr("class", "yaxis");
     let yAxis = d3.axisLeft(heightScale);
     yAxisGroup.call(yAxis)
-    yAxisGroup.attr("color", '#d68060')
+    yAxisGroup.attr("color", '#e1bc91')
       .attr("font-family", "Oswald")
       .attr("font-size", "13px")
       .attr("stroke-width", "3px")
@@ -386,7 +358,6 @@ function gotData(incomingData) {
         enterView({
           selector: '.scrollingContent #page2',
           enter: function(el){
-            // document.getElementById('div1').style.opacity= 1;
             showSleepGraph()
             xAxisGroup.attr('visibility', '')
             yAxisGroup.attr('visibility', '')
@@ -394,7 +365,6 @@ function gotData(incomingData) {
             // exerciseText.attr('visibility', 'hidden');
           },
           exit: function(el){
-            // document.getElementById('div1').style.opacity= 0;
             elementGroup.selectAll(".datagroup")
               .transition()
               .duration(300)
@@ -422,21 +392,6 @@ function gotData(incomingData) {
         clustering()
       })
     ;
-    // enterView({
-    //   selector: "#page2",
-    //   enter: function(el){
-    //     document.getElementById('div1').style.opacity= 1;
-    //
-    //   },
-    //   exit: function(el){
-    //     document.getElementById('div1').style.opacity= 0;
-    //
-    //   },
-    //   progress: function(el,progress){
-    //
-    //   },
-    //   offset:0.5,
-    // })
 
 
     // run simiulation 2 "about Exercise"
@@ -565,18 +520,18 @@ function gotData(incomingData) {
     };
     function fillColor(d) {
       if (d.activityLevel == 1){
-        return "#0f3057"
+        return "brown"
       } else if (d.activityLevel == 2){
-        return "#00587a"
+        return "red"
       } else if (d.activityLevel == 3){
-        return "#008891"
+        return "orange"
       } else if (d.activityLevel == 4){
-        return "#e7e7de"
+        return "yellow"
       } else {
         if (interactiveMode) {
-          return "black"
+          return "red"
         } else {
-          return "white"
+          return "purple"
 
         }
       }
@@ -587,25 +542,13 @@ function gotData(incomingData) {
       .duration(200)
       .style("fill", (d,i)=>{
         if (d.age >= 23 && d.age <=29 || d.age == 2329){
-          // return "#FAF3EC"
-          // return "#ffe5b9"
-          // return "#df7861"
-          return "#fcf8e8"
+          return "#ffe5b9"
         } else if (d.age >= 30 && d.age <=39 || d.age == 3039){
-          // return "#F8D9B8"
-          // return "#ffd56b"
-          // return "#ecb390"
-          return "#ecdfc8"
+          return "#ffd56b"
         } else if (d.age >= 40 && d.age <=49 || d.age == 4049){
-          // return "#FAA760"
-          // return "#ecb390"
-          // return "#d4e2d4"
           return "#ecb390"
         } else if (d.age >= 50 && d.age <=60 || d.age == 5060){
-          // return "#ED760F"
-          // return "#cc7351"
-          // return "#fcf8e8"
-          return "#df7861"
+          return "#cc7351"
         } else {
           return "black"
         }
@@ -640,7 +583,7 @@ function gotData(incomingData) {
     };
     reset = function(){
       d3.selectAll(".sleepCircle")
-        .transition(500)
+        .transition(1000)
         .duration(200)
         .attr("r", getRadius)
         .style("fill", (d,i)=>{
@@ -658,7 +601,7 @@ function gotData(incomingData) {
     //     .force("forceX", d3.forceX( d=>timeScale(d.time_to_bed_workdays) ))
     //     .force("forceY", d3.forceY( d=>heightScale(d.need_how_many_hours_sleep_workdays) ))
     //     .force("collide", d3.forceCollide(d=>5))
-
+    //
     //   elementGroup.selectAll(".datagroup")
     //     .transition()
     //     .duration(300)
@@ -673,214 +616,72 @@ function gotData(incomingData) {
 
 
     //////////////////////////////////// Graph 2:
+    // filter out special datapoint
 
-    function drawViz2(){
-      function assignKeys(d,i) {
-        return d.key
+    function drawViz2(datapoints){
+      console.log("datapoints", datapoints)
+      function assignKeys(d,i){
+        return i
       }
-
-      let dataElements = viz2.selectAll('.gridDatapoint').data(transformedData, assignKeys);
-
-      // enter:
-      let gridDataGroups = dataElements.enter()
+      // let gridDataGroups = viz2.selectAll('.gridDatapoint').data(datapoints, assignKeys).enter()
+      let gridDataGroups = viz2.selectAll('.gridDatapoint').data(datapoints, assignKeys).enter()
         .append("g")
         .attr("class", "gridDatapoint")
-        .attr("transform", (d, i)=>{
-          let x = i % numCol * padw + pad;
-          let y = Math.floor(i/numCol) * padh + pad;
-          return "translate("+x+","+y+")"
-        })
       ;
-
-      // append:
-      gridDataGroups.append("circle")
+      let gridCircles = gridDataGroups.append("circle")
         .attr('cx', padw/2)
         .attr('cy', padh/2)
         .attr('r', 5)
         .attr('fill', fillColor)
         .attr('class', 'gridcircle')
-        .transition(500)
+        .transition()
         .delay(500)
       ;
-
-      // function showFailToSleep(d){
-      //   if (showFailToSleep == false) {
-      //     return "none"
-      //   } else if (d.frequencyHavingDifficultyFallingAsleep == 4){
-      //     return "red"
-      //   } else {
-      //     return "blue"
-      //   }
-      // }
-
-      // update:
-      dataElements
-        .transition(200)
-        .duration(500)
-        .attr("transform", (d, i)=>{
-          let x = i % numCol * padw + pad;
-          let y = Math.floor(i/numCol) * padh + pad;
-          return "translate("+x+","+y+")"
-        })
-        // .attr("stroke", showFailToSleep)
-      ;
+      gridDataGroups.attr("transform", (d, i)=>{
+        let x = i % numCol * padw + pad;
+        let y = Math.floor(i/numCol) * padh + pad;
+        return "translate("+x+","+y+")"
+      })
     };
 
-    // 993 in total
-    // index: 0(usually) 1(sometimes) 2(seldom)
-    // col--- x1=x2: col*padw
-    // vig: vigFailToSleep[index]/rowNums[index]
-    // mod: modFailToSleep[index]/rowNums[index]
-    // lig: ligFailToSleep[index]/rowNums[index]
-    // non: nonFailToSleep[index]/rowNums[index]
-    // row--- y: rowNums[index]*padh
-
-
-    // // colNums:
-    // // exercise: 0(vig) 1(mod) 2(lig) 3(non)
-    // // frequency: 0(usually) 1(sometimes) 2(seldom)
-    // // row*padh
-    // // y = [0,]
-    //
-    // function getX(exercise,frequency){
-    //   // return vigProblems[index]/rowNums[index] * padw
-    //   return numArray[exercise][frequency]/rowNums[frequency+1] * padw
-    //
-    // };
-    // function getY1(index){
-    //   return numArray[exercise][frequency]/numArray[exercise][frequency] * padw
-    // };
-    // function getY2(index){
-    //   return vigProblems[index]/rowNums[index] * padw
-    // }
-
-    function drawLines(index){
-      console.log("yed");
-      let rowNums = [5,6,12,2]
-      // let rowNums = [5,11,23,25]
-      let vigFailToSleep = [14, 43, 126]
-      let modFailToSleep = [34, 64, 152]
-      let ligFailToSleep = [74, 109, 292]
-      let nonFailToSleep = [21, 21, 43]
-      // let numArray = [[14, 43, 126],[34, 64, 152],[74, 109, 292],[21, 21, 43]]
-      let vigWakeUp = [61,48,76]
-      let modWakeUp = [99,74,77]
-      let ligWakeUp = [211,117,149]
-      let nonWakeUp = [44,13,30]
-
-      let vigUnrefreshed = [32,64,85]
-      let modUnrefreshed = [49,89,110]
-      let ligUnrefreshed = [124,171,181]
-      let nonUnrefreshed = [38,24,24]
-
-      let v1x1 = [vigFailToSleep[0]/rowNums[0]*padw, vigWakeUp[0]/rowNums[0] * padw, vigUnrefreshed[0]/rowNums[0] * padw];
-      let v1y1 = [pad,pad,pad,pad];
-      let v1x2 = [vigFailToSleep[0]/rowNums[0] * padw,vigWakeUp[0]/rowNums[0] * padw,vigUnrefreshed[0]/rowNums[0] * padw];
-      let v1y2 = [rowNums[0]*padh+pad,rowNums[0]*padh+pad,rowNums[0]*padh+pad,rowNums[0]*padh+pad];
-
-      let v2x1 = [(vigFailToSleep[0]+vigFailToSleep[1])/rowNums[0] * padw,(vigWakeUp[0]+vigWakeUp[1])/rowNums[0] * padw,(vigUnrefreshed[0]+vigUnrefreshed[1])/rowNums[0] * padw];
-      let v2y1 = [pad,pad,pad,pad];
-      let v2x2 = [(vigFailToSleep[0]+vigFailToSleep[1])/rowNums[0] * padw,(vigWakeUp[0]+vigWakeUp[1])/rowNums[0] * padw,(vigUnrefreshed[0]+vigUnrefreshed[1])/rowNums[0] * padw];
-      let v2y2 = [rowNums[0]*padh + pad,rowNums[0]*padh+pad,rowNums[0]*padh+pad,rowNums[0]*padh+pad];
-
-
-      let m1x1 = [modFailToSleep[0]/rowNums[1] * padw,modWakeUp[0]/rowNums[1] * padw,modUnrefreshed[0]/rowNums[1] * padw];
-      let m1y1 = [rowNums[0]*padh + pad,rowNums[0]*padh + pad,rowNums[0]*padh + pad,rowNums[0]*padh + pad];
-      let m1x2 = [modFailToSleep[0]/rowNums[1] * padw,modWakeUp[0]/rowNums[1] * padw,modUnrefreshed[0]/rowNums[1] * padw];
-      let m1y2 = [(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad];
-
-      let m2x1 = [(modFailToSleep[0]+modFailToSleep[1])/rowNums[1] * padw,(modWakeUp[0]+modWakeUp[1])/rowNums[1] * padw,(modUnrefreshed[0]+modUnrefreshed[1])/rowNums[1] * padw];
-      let m2y1 = [rowNums[0]*padh + pad,rowNums[0]*padh + pad,rowNums[0]*padh + pad,rowNums[0]*padh + pad];
-      let m2x2 = [(modFailToSleep[0]+modFailToSleep[1])/rowNums[1] * padw,(modWakeUp[0]+modWakeUp[1])/rowNums[1] * padw,(modUnrefreshed[0]+modUnrefreshed[1])/rowNums[1] * padw];
-      let m2y2 = [(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad];
-
-      let l1x1 = [ligFailToSleep[0]/rowNums[2] * padw,ligWakeUp[0]/rowNums[2] * padw,ligUnrefreshed[0]/rowNums[2] * padw];
-      let l1y1 = [(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad];
-      let l1x2 = [ligFailToSleep[0]/rowNums[2] * padw,ligWakeUp[0]/rowNums[2] * padw,ligUnrefreshed[0]/rowNums[2] * padw];
-      let l1y2 = [(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad];
-
-      let l2x1 = [(ligFailToSleep[0]+ligFailToSleep[1])/rowNums[2] * padw,(ligWakeUp[0]+ligWakeUp[1])/rowNums[2] * padw,(ligUnrefreshed[0]+ligUnrefreshed[1])/rowNums[2] * padw];
-      let l2y1 = [(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad];
-      let l2x2 = [(ligFailToSleep[0]+ligFailToSleep[1])/rowNums[2] * padw,(ligWakeUp[0]+ligWakeUp[1])/rowNums[2] * padw,(ligUnrefreshed[0]+ligUnrefreshed[1])/rowNums[2] * padw];
-      let l2y2 = [(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad];
-
-
-      let n1x1 = [nonFailToSleep[0]/rowNums[3] * padw,nonWakeUp[0]/rowNums[3] * padw,nonUnrefreshed[0]/rowNums[3] * padw];
-      let n1y1 = [(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad];
-      let n1x2 = [nonFailToSleep[0]/rowNums[3] * padw,nonWakeUp[0]/rowNums[3] * padw,nonUnrefreshed[0]/rowNums[3] * padw];
-      let n1y2 = [(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad];
-
-      let n2x1 = [(nonFailToSleep[0]+nonFailToSleep[1])/rowNums[3] * padw,(nonWakeUp[0]+nonWakeUp[1])/rowNums[3] * padw,(nonUnrefreshed[0]+nonUnrefreshed[1])/rowNums[3] * padw];
-      let n2y1 = [(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad];
-      let n2x2 = [(nonFailToSleep[0]+nonFailToSleep[1])/rowNums[3] * padw,(nonWakeUp[0]+nonWakeUp[1])/rowNums[3] * padw,(nonUnrefreshed[0]+nonUnrefreshed[1])/rowNums[3] * padw];
-      let n2y2 = [(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad];
-
-
-
-      let vigline1 = viz2.append('line')
-        .attr('class', 'lines')
-        .attr("x1", v1x1[index])
-        .attr("y1", v1y1[index])
-        .attr("x2", v1x2[index])
-        .attr("y2", rowNums[0]*padh+pad)
-      ;
-      let vigline2 = viz2.append('line')
-        .attr('class', 'lines')
-        .attr("x1", v2x1[index])
-        .attr("y1", v2y1[index])
-        .attr("x2", v2x2[index])
-        .attr("y2", v2y2[index])
-      ;
-      let modline1 = viz2.append('line')
-        .attr('class', 'lines')
-        .attr("x1", m1x1[index])
-        .attr("y1", m1y1[index])
-        .attr("x2", m1x2[index])
-        .attr("y2", m1y2[index])
-      ;
-      let modline2 = viz2.append('line')
-        .attr('class', 'lines')
-        .attr("x1", m2x1[index])
-        .attr("y1", m2y1[index])
-        .attr("x2", m2x2[index])
-        .attr("y2", m2y2[index])
-      ;
-      let ligline1 = viz2.append('line')
-        .attr('class', 'lines')
-        .attr("x1", l1x1[index])
-        .attr("y1", l1y1[index])
-        .attr("x2", l1x2[index])
-        .attr("y2", l1y2[index])
-      ;
-      let ligline2 = viz2.append('line')
-        .attr('class', 'lines')
-        .attr("x1", l2x1[index])
-        .attr("y1", l2y1[index])
-        .attr("x2", l2x2[index])
-        .attr("y2", l2y2[index])
-      ;
-      let nonline1 = viz2.append('line')
-        .attr('class', 'lines')
-        .attr("x1", n1x1[index])
-        .attr("y1", n1y1[index])
-        .attr("x2", n1x2[index])
-        .attr("y2", n1y2[index])
-      ;
-      let nonline2 = viz2.append('line')
-        .attr('class', 'lines')
-        .attr("x1", n2x1[index])
-        .attr("y1", n2y1[index])
-        .attr("x2", n2x2[index])
-        .attr("y2", n2y2[index])
-      ;
-      d3.selectAll('.lines')
-        // .transition(100)
-        .style("stroke", "#a8dda8")
-        .style("stroke-width", 5)
-      ;
+    drawViz2updateActivityLevel = function(){
+      let sortedData = transformedData;
+      sortedData.sort(sortByProperty('activityLevel'))
+      let gridDataGroups = viz2.selectAll('.gridDatapoint').data(sortedData, assignKeys);
+      // gridDataGroups.attr('transform', 'translate('+graph2W/2+','+graph2H/2+')')(d,i)=>{
+      gridDataGroups.transition().duration(500).attr("transform", (d,i)=>{
+        let x = i % numCol * padw + pad;
+        let y = Math.floor(i/numCol) * padh + pad;
+        return "translate("+x+","+y+")"
+      });
     }
 
 
+
+// ？？？？？？？？// why color doesnt change
+    sortActivity = function(d){
+      let sortedData = transformedData;
+      console.log('DS CHECK', sortedData[0].age, transformedData[0].age)
+
+      sortedData.sort(sortByProperty('activityLevel'))
+      console.log('DS CHECK', sortedData[0].age, transformedData[0].age)
+
+      gridDataGroups = viz2.selectAll('.gridDatapoint').data(sortedData)
+        // .attr("transform", (d,i)=>{
+        //   let x = i % numCol * padw + pad;
+        //   let y = Math.floor(i/numCol) * padh + pad;
+        //   return "translate("+x+","+y+")"
+        // });
+      gridDataGroups.selectAll(".gridcircle").attr('fill', fillColor);
+      gridDataGroups.transition().duration(500).attr("transform", (d,i)=>{
+        let x = i % numCol * padw + pad;
+        let y = Math.floor(i/numCol) * padh + pad;
+        return "translate("+x+","+y+")"
+      });
+
+    }
+
+    // document.getElementById("sort").addEventListener('click', sortActivity);
 
 
 
@@ -888,75 +689,19 @@ function gotData(incomingData) {
     enterView({
       selector: '.scrollingContent #page4',
       enter: function(el){
-        drawViz2();
-
-        d3.select("#sort").on("click", function(){
-          transformedData.sort(function(d1, d2){
-            return d3.ascending(d1.activityLevel, d2.activityLevel);
-          })
-          drawViz2();
-        });
-
-        d3.select("#failToSleep").on("click", function(){
-          d3.selectAll('.lines').remove()
-          index = 0
-          drawLines(index);
-        });
-
-        d3.select("#wakeUp").on("click", function(){
-          index = 1
-          d3.selectAll('.lines').remove()
-          drawLines(index);
-        });
-
-        d3.select("#unfreshed").on("click", function(){
-          index = 2
-          d3.selectAll('.lines').remove()
-          drawLines(index);
-        });
-
-        // d3.select("#tooEarly").on("click", function(){
-        //   index = 3
-        //   drawLines(index);
-        // });
-
-
-        // d3.select("#wakeUp").on("click", function(){
-        //   line1.attr("fill","red")
-        //   // showFailToSleep = true;
-        //   // // drawViz2();
-        //   // drawLines();
-        // });
-
-        // d3.select("#sort").on("click", function(){
-        //   data.sort(function(d1, d2){
-        //     return d3.ascending(d1.activityLevel, d2.activityLevel);
-        //   })
-        //   drawViz2();
-        // })
+        drawViz2(transformedData);
       },
       exit: function(el){
+
       },
       progress: function(el, progress) {
         // console.log("the special element's progress is:", progress);
       },
       offset: 0.4,
-    });
-
+    })
 
 
 }
-// drawLines = function(){
-//   console.log('yes');
-//   viz1.append('line')
-//     .attr('class', 'lines')
-//     .style("stroke", "white")
-//     .style("stroke-width", 10)
-//     .attr("x1", 0)
-//     .attr("y1", 200)
-//     .attr("x2", 200)
-//     .attr("y2", 200)
-// }
 
 
 
@@ -1042,6 +787,10 @@ function sortByProperty(property){
 document.getElementById("browsingMode").addEventListener("click", function(){
   browsingMode = true;
   interactiveMode = false;
+  // window.scrollTo({
+  //     top: h,
+  //     behavior: "smooth"
+  // });
   d3.json("data0.json").then(gotData);
 });
 
@@ -1049,6 +798,13 @@ document.getElementById("browsingMode").addEventListener("click", function(){
 document.getElementById("interactiveMode").addEventListener("click", function(){
   interactiveMode = true;
   browsingMode = false;
+	// window.scrollTo({
+  //     top: h,
+  //     behavior: "smooth"
+  // });
+  // generate a point
+  // console.log(inputAge,inputTime,inputDuration,typeof(inputTime));
+  // special.attr('visibility', 'visible')
   d3.json("data0.json").then(gotData);
 
 });

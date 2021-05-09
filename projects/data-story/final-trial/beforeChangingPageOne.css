@@ -1,7 +1,6 @@
 body {
   margin:0;
   font-family: sans-serif;
-  background-color: #202227;
 }
 
 
@@ -31,7 +30,11 @@ element is scrolling up (there is not magic to stickiness!)
 }
 
 .stickyDiv #vizContainer1 {
-  margin-left: 27vw;
+  margin-left: 32vw;
+}
+
+.stickyDiv #vizContainer2 {
+  margin-left: -35vw;
 }
 
 
@@ -42,37 +45,31 @@ element is scrolling up (there is not magic to stickiness!)
   margin-left: 20px;
   margin-right: 20px;
   margin-top: -100vh;
+
   padding: 10px;
   padding-top: 0px;
+
   /* background-color: lightyellow; */
   margin-bottom:10px;
-  display: flex;
   /* float:left; */
 }
 
-#page1 .column1{
-  width: 30vw;
-  padding-top: 60px;
-  padding-left: 40px;
-  padding-right: 50px;
+.column{
+  float: left;
 }
 
 .title{
   align-content: center;
-  /* width: 30vw; */
+  width: 30vw;
   height: 100vh;
-}
-
-#page1 .column2{
-  margin-top: 20px;
-  width: 63vw;
+  /* float: left; */
 }
 
 .intro{
   text-indent:50px;
-  width:60vw;
+  width:65vw;
   height: 40vh;
-  /* background-color: pink; */
+  background-color: pink;
   /* white-space:nowrap; */
 }
 
@@ -83,10 +80,9 @@ element is scrolling up (there is not magic to stickiness!)
   /* background-color: lightblue; */
 }
 
-/* .inputT{
-  text-indent:40px;
-} */
-
+.inputT{
+  text-indent:50px;
+}
 /* .intro{
   float: right;
   height: 50vh;
@@ -100,9 +96,8 @@ element is scrolling up (there is not magic to stickiness!)
   width: 30vw;
   height: 100vh;
   margin-left: 30px;
-  padding-left: 20px;
-  padding: 15px;
-  /* background-color: lightgreen; */
+  padding: 10px;
+  background-color: lightgreen;
   margin-bottom: 10px;
 }
 
@@ -110,28 +105,19 @@ element is scrolling up (there is not magic to stickiness!)
   width: 30vw;
   height: 100vh;
   margin-left: 30px;
-  padding: 15px;
-  padding-left: 20px;
-  /* background-color: #fffdf6; */
+  padding: 10px;
+  background-color: lightgrey;
   margin-bottom: 10px;
 }
 
-
-.stickyDiv #vizContainer2 {
-  margin-left: -34vw;
-}
-
-
-#page4{
+#problem{
   width: 30vw;
   height: 100vh;
-  margin-left: 65%;
+  margin-left: 65vw;
   margin-top: -100vh;
   padding: 10px;
   /* background-color: lightyellow; */
   margin-bottom: 10px;
-  /* display:flex */
-
 }
 
 #page5{
@@ -140,20 +126,11 @@ element is scrolling up (there is not magic to stickiness!)
   height: 100vh;
   margin-left: 0px;
   padding: 30px;
+  background-color: lightgrey;
   margin-bottom: 10px;
 }
-#page5 .left{
+#page5 .column{
   width: 30%;
-  padding-top: 70px;
-  padding-left: 20px;
-}
-#page5 .middle{
-  width: 25%;
-  padding-top: 0px;
-}
-#page5 .right{
-  width: 50%;
-  padding-top: 70px;
 }
 #page5 div.middle{
   flex-direction: column;
@@ -168,7 +145,7 @@ element is scrolling up (there is not magic to stickiness!)
   flex-grow: 1
 }
 #page5 .row{
-  height: 25%;
+  height: 30%;
 }
 
 
@@ -181,33 +158,17 @@ element is scrolling up (there is not magic to stickiness!)
 .text{
   margin-top: 15vh;
   width: 30vw;
-  color: #fffdf6;
-  font-family: 'Oswald', sans-serif;
-
 }
-
 
 p{
   margin-top: 0;
-  font-family: 'Oswald', sans-serif;
-  color: #fffdf6;
+  font-family: 'Cabin Sketch', cursive;
   font-size: 25px;
-
-}
-.buttonIns{
-  color:grey
-}
-.pureText{
-  font-size: 20px;
-  /* color: #fffdf6; */
 }
 
 h1{
   font-size: 90px;
   font-family: 'Cabin Sketch', cursive;
-  color: #fffdf6;
-  /* color:#ffe5b9; */
-  /* text-indent:15px; */
   /* font-family: 'Unlock', cursive; */
   /* font-family: 'Monoton', cursive; */
 }
@@ -218,34 +179,12 @@ h2{
   margin-bottom: 40px;
   text-decoration-line: underline;
   text-decoration-style: wavy;
-  text-decoration-color:#fffdf6;
-  /* text-indent:15px; */
-  color: #fffdf6
-}
-
-#sleep{
-  color:#d68060
-}
-#exercise{
-  color:#e1bc91;
-}
-#problems{
-  /* color:#8bcdcd; */
-  color:#a8dda8;
+  text-decoration-color: black;
 }
 
 h3{
-  font-size: 35px;
+  font-size: 30px;
   font-family: 'Cabin Sketch', cursive;
-  color: #fffdf6;
-  text-align: right;
-}
-
-h4{
-  font-size: 40px;
-  font-family: 'Cabin Sketch', cursive;
-  color: #fffdf6;
-
 }
 
 

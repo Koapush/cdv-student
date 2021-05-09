@@ -7,14 +7,14 @@ let interactiveMode;
 
 
 function calculate(incomingData){
-  num = 0;
+  vig_everynight_num = 0;
   for (i=0; i<incomingData.length; i++) {
-    if (incomingData[i].activityLevel == 4 && incomingData[i].frequencyFeelingUnrefreshed == 2) {
-      num +=1
+    if (incomingData[i].activityLevel == 4 && incomingData[i].frequencyHavingDifficultyFallingAsleep == 1) {
+      vig_everynight_num +=1
   }
   }
 
-  console.log(num);
+  console.log(vig_everynight_num);
 };
 
 d3.json("data0.json").then(calculate);
@@ -241,7 +241,7 @@ function gotData(incomingData) {
     var exerciseText1 = vizGroup.append("text")
       .text("↑ Vigorous Exercisers")
       .attr('class', 'exerciseText')
-      .attr("transform", "translate("+(graphW/2-173)+","+(graphH/2-20)+")")
+      .attr("transform", "translate("+(graphW/2-180)+","+(graphH/2-20)+")")
       .attr('fill', '#e1bc91')
       .attr('visibility', 'hidden')
       .attr('font-family', 'Oswald')
@@ -289,7 +289,7 @@ function gotData(incomingData) {
 		let xAxisGroup = vizGroup.append('g').attr('class', 'xAxisGroup');
 		let xAxis = d3.axisBottom(timeScale).ticks(12);
     xAxisGroup.call(xAxis)
-		xAxisGroup.attr("color", "#d68060")
+		xAxisGroup.attr("color", "#e1bc91")
 			.attr("font-family", "Oswald")
 			.attr("font-size", "15px")
 			.attr("stroke-width", "3px")
@@ -316,7 +316,7 @@ function gotData(incomingData) {
 		let yAxisGroup = vizGroup.append("g").attr("class", "yaxis");
     let yAxis = d3.axisLeft(heightScale);
     yAxisGroup.call(yAxis)
-    yAxisGroup.attr("color", '#d68060')
+    yAxisGroup.attr("color", '#e1bc91')
       .attr("font-family", "Oswald")
       .attr("font-size", "13px")
       .attr("stroke-width", "3px")
@@ -386,7 +386,6 @@ function gotData(incomingData) {
         enterView({
           selector: '.scrollingContent #page2',
           enter: function(el){
-            // document.getElementById('div1').style.opacity= 1;
             showSleepGraph()
             xAxisGroup.attr('visibility', '')
             yAxisGroup.attr('visibility', '')
@@ -394,7 +393,6 @@ function gotData(incomingData) {
             // exerciseText.attr('visibility', 'hidden');
           },
           exit: function(el){
-            // document.getElementById('div1').style.opacity= 0;
             elementGroup.selectAll(".datagroup")
               .transition()
               .duration(300)
@@ -422,21 +420,6 @@ function gotData(incomingData) {
         clustering()
       })
     ;
-    // enterView({
-    //   selector: "#page2",
-    //   enter: function(el){
-    //     document.getElementById('div1').style.opacity= 1;
-    //
-    //   },
-    //   exit: function(el){
-    //     document.getElementById('div1').style.opacity= 0;
-    //
-    //   },
-    //   progress: function(el,progress){
-    //
-    //   },
-    //   offset:0.5,
-    // })
 
 
     // run simiulation 2 "about Exercise"
@@ -587,25 +570,22 @@ function gotData(incomingData) {
       .duration(200)
       .style("fill", (d,i)=>{
         if (d.age >= 23 && d.age <=29 || d.age == 2329){
-          // return "#FAF3EC"
+          return "#FAF3EC"
           // return "#ffe5b9"
           // return "#df7861"
-          return "#fcf8e8"
         } else if (d.age >= 30 && d.age <=39 || d.age == 3039){
-          // return "#F8D9B8"
+          return "#F8D9B8"
           // return "#ffd56b"
           // return "#ecb390"
-          return "#ecdfc8"
+
         } else if (d.age >= 40 && d.age <=49 || d.age == 4049){
-          // return "#FAA760"
+          return "#FAA760"
           // return "#ecb390"
           // return "#d4e2d4"
-          return "#ecb390"
         } else if (d.age >= 50 && d.age <=60 || d.age == 5060){
-          // return "#ED760F"
           // return "#cc7351"
           // return "#fcf8e8"
-          return "#df7861"
+          return "#ED760F"
         } else {
           return "black"
         }
@@ -699,7 +679,7 @@ function gotData(incomingData) {
         .attr('r', 5)
         .attr('fill', fillColor)
         .attr('class', 'gridcircle')
-        .transition(500)
+        .transition()
         .delay(500)
       ;
 
@@ -754,7 +734,7 @@ function gotData(incomingData) {
     //   return vigProblems[index]/rowNums[index] * padw
     // }
 
-    function drawLines(index){
+    function drawLines(){
       console.log("yed");
       let rowNums = [5,6,12,2]
       // let rowNums = [5,11,23,25]
@@ -762,120 +742,66 @@ function gotData(incomingData) {
       let modFailToSleep = [34, 64, 152]
       let ligFailToSleep = [74, 109, 292]
       let nonFailToSleep = [21, 21, 43]
-      // let numArray = [[14, 43, 126],[34, 64, 152],[74, 109, 292],[21, 21, 43]]
-      let vigWakeUp = [61,48,76]
-      let modWakeUp = [99,74,77]
-      let ligWakeUp = [211,117,149]
-      let nonWakeUp = [44,13,30]
-
-      let vigUnrefreshed = [32,64,85]
-      let modUnrefreshed = [49,89,110]
-      let ligUnrefreshed = [124,171,181]
-      let nonUnrefreshed = [38,24,24]
-
-      let v1x1 = [vigFailToSleep[0]/rowNums[0]*padw, vigWakeUp[0]/rowNums[0] * padw, vigUnrefreshed[0]/rowNums[0] * padw];
-      let v1y1 = [pad,pad,pad,pad];
-      let v1x2 = [vigFailToSleep[0]/rowNums[0] * padw,vigWakeUp[0]/rowNums[0] * padw,vigUnrefreshed[0]/rowNums[0] * padw];
-      let v1y2 = [rowNums[0]*padh+pad,rowNums[0]*padh+pad,rowNums[0]*padh+pad,rowNums[0]*padh+pad];
-
-      let v2x1 = [(vigFailToSleep[0]+vigFailToSleep[1])/rowNums[0] * padw,(vigWakeUp[0]+vigWakeUp[1])/rowNums[0] * padw,(vigUnrefreshed[0]+vigUnrefreshed[1])/rowNums[0] * padw];
-      let v2y1 = [pad,pad,pad,pad];
-      let v2x2 = [(vigFailToSleep[0]+vigFailToSleep[1])/rowNums[0] * padw,(vigWakeUp[0]+vigWakeUp[1])/rowNums[0] * padw,(vigUnrefreshed[0]+vigUnrefreshed[1])/rowNums[0] * padw];
-      let v2y2 = [rowNums[0]*padh + pad,rowNums[0]*padh+pad,rowNums[0]*padh+pad,rowNums[0]*padh+pad];
-
-
-      let m1x1 = [modFailToSleep[0]/rowNums[1] * padw,modWakeUp[0]/rowNums[1] * padw,modUnrefreshed[0]/rowNums[1] * padw];
-      let m1y1 = [rowNums[0]*padh + pad,rowNums[0]*padh + pad,rowNums[0]*padh + pad,rowNums[0]*padh + pad];
-      let m1x2 = [modFailToSleep[0]/rowNums[1] * padw,modWakeUp[0]/rowNums[1] * padw,modUnrefreshed[0]/rowNums[1] * padw];
-      let m1y2 = [(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad];
-
-      let m2x1 = [(modFailToSleep[0]+modFailToSleep[1])/rowNums[1] * padw,(modWakeUp[0]+modWakeUp[1])/rowNums[1] * padw,(modUnrefreshed[0]+modUnrefreshed[1])/rowNums[1] * padw];
-      let m2y1 = [rowNums[0]*padh + pad,rowNums[0]*padh + pad,rowNums[0]*padh + pad,rowNums[0]*padh + pad];
-      let m2x2 = [(modFailToSleep[0]+modFailToSleep[1])/rowNums[1] * padw,(modWakeUp[0]+modWakeUp[1])/rowNums[1] * padw,(modUnrefreshed[0]+modUnrefreshed[1])/rowNums[1] * padw];
-      let m2y2 = [(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad];
-
-      let l1x1 = [ligFailToSleep[0]/rowNums[2] * padw,ligWakeUp[0]/rowNums[2] * padw,ligUnrefreshed[0]/rowNums[2] * padw];
-      let l1y1 = [(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad];
-      let l1x2 = [ligFailToSleep[0]/rowNums[2] * padw,ligWakeUp[0]/rowNums[2] * padw,ligUnrefreshed[0]/rowNums[2] * padw];
-      let l1y2 = [(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad];
-
-      let l2x1 = [(ligFailToSleep[0]+ligFailToSleep[1])/rowNums[2] * padw,(ligWakeUp[0]+ligWakeUp[1])/rowNums[2] * padw,(ligUnrefreshed[0]+ligUnrefreshed[1])/rowNums[2] * padw];
-      let l2y1 = [(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad,(rowNums[0]+rowNums[1])*padh + pad];
-      let l2x2 = [(ligFailToSleep[0]+ligFailToSleep[1])/rowNums[2] * padw,(ligWakeUp[0]+ligWakeUp[1])/rowNums[2] * padw,(ligUnrefreshed[0]+ligUnrefreshed[1])/rowNums[2] * padw];
-      let l2y2 = [(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad];
-
-
-      let n1x1 = [nonFailToSleep[0]/rowNums[3] * padw,nonWakeUp[0]/rowNums[3] * padw,nonUnrefreshed[0]/rowNums[3] * padw];
-      let n1y1 = [(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad];
-      let n1x2 = [nonFailToSleep[0]/rowNums[3] * padw,nonWakeUp[0]/rowNums[3] * padw,nonUnrefreshed[0]/rowNums[3] * padw];
-      let n1y2 = [(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad];
-
-      let n2x1 = [(nonFailToSleep[0]+nonFailToSleep[1])/rowNums[3] * padw,(nonWakeUp[0]+nonWakeUp[1])/rowNums[3] * padw,(nonUnrefreshed[0]+nonUnrefreshed[1])/rowNums[3] * padw];
-      let n2y1 = [(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2])*padh + pad];
-      let n2x2 = [(nonFailToSleep[0]+nonFailToSleep[1])/rowNums[3] * padw,(nonWakeUp[0]+nonWakeUp[1])/rowNums[3] * padw,(nonUnrefreshed[0]+nonUnrefreshed[1])/rowNums[3] * padw];
-      let n2y2 = [(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad,(rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad];
-
-
+      let numArray = [[14, 43, 126],[34, 64, 152],[74, 109, 292],[21, 21, 43]]
 
       let vigline1 = viz2.append('line')
         .attr('class', 'lines')
-        .attr("x1", v1x1[index])
-        .attr("y1", v1y1[index])
-        .attr("x2", v1x2[index])
-        .attr("y2", rowNums[0]*padh+pad)
+        .attr("x1", vigFailToSleep[0]/rowNums[0] * padw)
+        .attr("y1", pad)
+        .attr("x2", vigFailToSleep[0]/rowNums[0] * padw)
+        .attr("y2", rowNums[0]*padh + pad)
       ;
       let vigline2 = viz2.append('line')
         .attr('class', 'lines')
-        .attr("x1", v2x1[index])
-        .attr("y1", v2y1[index])
-        .attr("x2", v2x2[index])
-        .attr("y2", v2y2[index])
+        .attr("x1", (vigFailToSleep[0]+vigFailToSleep[1])/rowNums[0] * padw)
+        .attr("y1", pad)
+        .attr("x2", (vigFailToSleep[0]+vigFailToSleep[1])/rowNums[0] * padw)
+        .attr("y2", rowNums[0]*padh + pad)
       ;
       let modline1 = viz2.append('line')
         .attr('class', 'lines')
-        .attr("x1", m1x1[index])
-        .attr("y1", m1y1[index])
-        .attr("x2", m1x2[index])
-        .attr("y2", m1y2[index])
+        .attr("x1", modFailToSleep[0]/rowNums[1] * padw)
+        .attr("y1", rowNums[0]*padh + pad)
+        .attr("x2", modFailToSleep[0]/rowNums[1] * padw)
+        .attr("y2", (rowNums[0]+rowNums[1])*padh + pad)
       ;
       let modline2 = viz2.append('line')
         .attr('class', 'lines')
-        .attr("x1", m2x1[index])
-        .attr("y1", m2y1[index])
-        .attr("x2", m2x2[index])
-        .attr("y2", m2y2[index])
+        .attr("x1", (modFailToSleep[0]+modFailToSleep[1])/rowNums[1] * padw)
+        .attr("y1", rowNums[0]*padh + pad)
+        .attr("x2", (modFailToSleep[0]+modFailToSleep[1])/rowNums[1] * padw)
+        .attr("y2", (rowNums[0]+rowNums[1])*padh + pad)
       ;
       let ligline1 = viz2.append('line')
         .attr('class', 'lines')
-        .attr("x1", l1x1[index])
-        .attr("y1", l1y1[index])
-        .attr("x2", l1x2[index])
-        .attr("y2", l1y2[index])
+        .attr("x1", ligFailToSleep[0]/rowNums[2] * padw)
+        .attr("y1", (rowNums[0]+rowNums[1])*padh + pad)
+        .attr("x2", ligFailToSleep[0]/rowNums[2] * padw)
+        .attr("y2", (rowNums[0]+rowNums[1]+rowNums[2])*padh + pad)
       ;
       let ligline2 = viz2.append('line')
         .attr('class', 'lines')
-        .attr("x1", l2x1[index])
-        .attr("y1", l2y1[index])
-        .attr("x2", l2x2[index])
-        .attr("y2", l2y2[index])
+        .attr("x1", (ligFailToSleep[0]+ligFailToSleep[1])/rowNums[2] * padw)
+        .attr("y1", (rowNums[0]+rowNums[1])*padh + pad)
+        .attr("x2", (ligFailToSleep[0]+ligFailToSleep[1])/rowNums[2] * padw)
+        .attr("y2", (rowNums[0]+rowNums[1]+rowNums[2])*padh + pad)
       ;
       let nonline1 = viz2.append('line')
         .attr('class', 'lines')
-        .attr("x1", n1x1[index])
-        .attr("y1", n1y1[index])
-        .attr("x2", n1x2[index])
-        .attr("y2", n1y2[index])
+        .attr("x1", nonFailToSleep[0]/rowNums[3] * padw)
+        .attr("y1", (rowNums[0]+rowNums[1]+rowNums[2])*padh + pad)
+        .attr("x2", nonFailToSleep[0]/rowNums[3] * padw)
+        .attr("y2", (rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad)
       ;
       let nonline2 = viz2.append('line')
         .attr('class', 'lines')
-        .attr("x1", n2x1[index])
-        .attr("y1", n2y1[index])
-        .attr("x2", n2x2[index])
-        .attr("y2", n2y2[index])
+        .attr("x1", (nonFailToSleep[0]+nonFailToSleep[1])/rowNums[3] * padw)
+        .attr("y1", (rowNums[0]+rowNums[1]+rowNums[2])*padh + pad)
+        .attr("x2", (nonFailToSleep[0]+nonFailToSleep[1])/rowNums[3] * padw)
+        .attr("y2", (rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad)
       ;
       d3.selectAll('.lines')
-        // .transition(100)
-        .style("stroke", "#a8dda8")
+        .style("stroke", "lightgreen")
         .style("stroke-width", 5)
       ;
     }
@@ -898,28 +824,8 @@ function gotData(incomingData) {
         });
 
         d3.select("#failToSleep").on("click", function(){
-          d3.selectAll('.lines').remove()
-          index = 0
-          drawLines(index);
+          drawLines();
         });
-
-        d3.select("#wakeUp").on("click", function(){
-          index = 1
-          d3.selectAll('.lines').remove()
-          drawLines(index);
-        });
-
-        d3.select("#unfreshed").on("click", function(){
-          index = 2
-          d3.selectAll('.lines').remove()
-          drawLines(index);
-        });
-
-        // d3.select("#tooEarly").on("click", function(){
-        //   index = 3
-        //   drawLines(index);
-        // });
-
 
         // d3.select("#wakeUp").on("click", function(){
         //   line1.attr("fill","red")
@@ -1042,6 +948,10 @@ function sortByProperty(property){
 document.getElementById("browsingMode").addEventListener("click", function(){
   browsingMode = true;
   interactiveMode = false;
+  // window.scrollTo({
+  //     top: h,
+  //     behavior: "smooth"
+  // });
   d3.json("data0.json").then(gotData);
 });
 
@@ -1049,6 +959,13 @@ document.getElementById("browsingMode").addEventListener("click", function(){
 document.getElementById("interactiveMode").addEventListener("click", function(){
   interactiveMode = true;
   browsingMode = false;
+	// window.scrollTo({
+  //     top: h,
+  //     behavior: "smooth"
+  // });
+  // generate a point
+  // console.log(inputAge,inputTime,inputDuration,typeof(inputTime));
+  // special.attr('visibility', 'visible')
   d3.json("data0.json").then(gotData);
 
 });

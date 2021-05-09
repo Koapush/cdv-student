@@ -38,9 +38,10 @@ function transformData(dataToTransform) {
 
 
 function gotData(incomingData){
+    console.log('heng',typeof(incomingData))
     console.log(incomingData.length)
     let transformedData = transformData(incomingData)
-    console.log(transformedData)
+    console.log('hello',transformedData)
 
 
     let vizGroup = viz.append("g").attr("class","vizGroup")
