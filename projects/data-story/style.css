@@ -143,17 +143,18 @@ element is scrolling up (there is not magic to stickiness!)
   margin-bottom: 10px;
 }
 #page5 .left{
-  width: 30%;
+  width: 28%;
   padding-top: 70px;
   padding-left: 20px;
 }
 #page5 .middle{
-  width: 25%;
+  width: 21%;
   padding-top: 0px;
 }
 #page5 .right{
   width: 50%;
-  padding-top: 70px;
+  padding-top: 30px;
+  padding-right: 50px;
 }
 #page5 div.middle{
   flex-direction: column;
@@ -165,11 +166,19 @@ element is scrolling up (there is not magic to stickiness!)
   flex-direction: column;
 }
 #page5 div.right div{
-  flex-grow: 1
+  flex-grow: 1;
 }
 #page5 .row{
   height: 25%;
+  padding-top: 50px;
 }
+/*
+#middle{
+  padding-top: 50px;
+} */
+
+
+
 
 
 

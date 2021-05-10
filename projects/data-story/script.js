@@ -586,7 +586,7 @@ function gotData(incomingData) {
       .transition(500)
       .duration(200)
       .style("fill", (d,i)=>{
-        if (d.age >= 23 && d.age <=29 || d.age == 2329){
+        if (d.age >= 20 && d.age <=29 || d.age == 2029){
           // return "#FAF3EC"
           // return "#ffe5b9"
           // return "#df7861"
