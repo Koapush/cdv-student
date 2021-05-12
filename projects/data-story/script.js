@@ -471,6 +471,7 @@ function gotData(incomingData) {
             node.endingX = node.x;
             node.endingY = node.y;
           });
+          
           enterView({
             selector: '.scrollingContent #page3',
             enter: function(el){
