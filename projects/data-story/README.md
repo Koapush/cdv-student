@@ -7,7 +7,8 @@ Suffering sleep problems? Wanna know how exercise influence sleep? This is a dat
 - contextual [report](https://docs.google.com/document/d/1cDzqWPpsl3j5gNwE3g2FKcNkaeO5fTKNM9SC_A4lPik/edit) and [presentation slides](https://docs.google.com/presentation/d/1SB5UsZYPoDOT8SxcKB8L67YrwkyXeGYXvuoY3cEktJU/edit)
 
 ### demo  
-![](gif/1.gif)
+![](1.gif)
+![](2.gif)
 
 ### about data
 - [questionnaire](https://www.sleepfoundation.org/wp-content/uploads/2018/10/SIAQuestionnaire2013.pdf)
