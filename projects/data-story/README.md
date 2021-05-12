@@ -11,7 +11,8 @@ Suffering sleep problems? Wanna know how exercise influence sleep? This is a dat
 
 ### about data
 - [questionnaire](https://www.sleepfoundation.org/wp-content/uploads/2018/10/SIAQuestionnaire2013.pdf)
-- [raw data](https://els-jbs-prod-cdn.jbs.elsevierhealth.com/pb/assets/raw/Health%20Advance/journals/sleh/2013SleepinAmericaPollExerciseandSleepRawDataExcel.xls)
+- [raw data](https://els-jbs-prod-cdn.jbs.elsevierhealth.com/pb/assets/raw/Health%20Advance/journals/sleh/2013SleepinAmericaPollExerciseandSleepRawDataExcel.xls) <br>
+
 Since the raw data excel is a collection of 1,000 respondents' answers to the above questionnaire, the data is all option numbers of questions. Most of the option numbers represent time spans/types of conditions rather than specific data to visualize, therefore in the js file I manually convert columns of option numbers into the corresponding amount of time/exercise/etc. In order to visualize data points diversely, I apply functions such as Math.random() and Math.floor() to those option numbers representing numerical intervals (the first four questions in the questionnaire might serve as a good example here).
 
 ### about process
