@@ -130,6 +130,23 @@ let clusternameObject = [
 	{'mode':'light'},
 	{'mode':'none'}
 ];
+let rowNums = [5,6,12,2]
+// let rowNums = [5,11,23,25]
+let vigFailToSleep = [14, 43, 126]
+let modFailToSleep = [34, 64, 152]
+let ligFailToSleep = [74, 109, 292]
+let nonFailToSleep = [21, 21, 43]
+// let numArray = [[14, 43, 126],[34, 64, 152],[74, 109, 292],[21, 21, 43]]
+let vigWakeUp = [61,48,76]
+let modWakeUp = [99,74,77]
+let ligWakeUp = [211,117,149]
+let nonWakeUp = [44,13,30]
+
+let vigUnrefreshed = [32,64,85]
+let modUnrefreshed = [49,89,110]
+let ligUnrefreshed = [124,171,181]
+let nonUnrefreshed = [38,24,24]
+
 let viz2 = d3.select("#vizContainer2")
    .append("svg")
    // Container class to make it responsive.
@@ -137,6 +154,7 @@ let viz2 = d3.select("#vizContainer2")
    .attr("height", graph2H)
    // .style("background-color", "grey")
 ;
+
 
 
 
@@ -710,6 +728,47 @@ function gotData(incomingData) {
         .attr("font-family", "Oswald")
         .attr('visibility', 'hidden')
         .attr('class', 'viz2title')
+      ;
+      viz2.append("text")
+        .text("Vigorous Exercisers")
+        .attr("transform", "translate("+graphW/5+","+(rowNums[0]*padh+pad)/1.5+")")
+        .attr('opacity','0.3')
+        .attr("font-size", "60px")
+        .attr("fill", "white")
+        .attr("font-family", "Oswald")
+        .attr('visibility', 'hidden')
+        .attr('class', 'viz2exercisers')
+      ;
+      viz2.append("text")
+        .text("Moderate Exercisers")
+        .attr("transform", "translate("+graphW/5+","+((rowNums[0]+rowNums[1])*padh + pad)/1.2+")")
+        .attr('opacity','0.3')
+        .attr("font-size", "60px")
+        .attr("fill", "white")
+        .attr("font-family", "Oswald")
+        .attr('visibility', 'hidden')
+        .attr('class', 'viz2exercisers')
+      ;
+      viz2.append("text")
+        .text("Light Exercisers")
+        .attr("transform", "translate("+graphW/4.2+","+((rowNums[0]+rowNums[1]+rowNums[2])*padh + pad)/1.2+")")
+        .attr('opacity','0.3')
+        .attr("font-size", "60px")
+        .attr("fill", "white")
+        .attr("font-family", "Oswald")
+        .attr('visibility', 'hidden')
+        .attr('class', 'viz2exercisers')
+      ;
+      viz2.append("text")
+        .text("Non-Exercisers")
+        .attr("transform", "translate("+graphW/4+","+((rowNums[0]+rowNums[1]+rowNums[2]+rowNums[3])*padh + pad)+")")
+        .attr('opacity','0.3')
+        .attr("font-size", "60px")
+        .attr("fill", "white")
+        .attr("font-family", "Oswald")
+        .attr('visibility', 'hidden')
+        .attr('class', 'viz2exercisers')
+
 
       // function showFailToSleep(d){
       //   if (showFailToSleep == false) {
@@ -764,22 +823,6 @@ function gotData(incomingData) {
 
     function drawLines(index){
       console.log("yed");
-      let rowNums = [5,6,12,2]
-      // let rowNums = [5,11,23,25]
-      let vigFailToSleep = [14, 43, 126]
-      let modFailToSleep = [34, 64, 152]
-      let ligFailToSleep = [74, 109, 292]
-      let nonFailToSleep = [21, 21, 43]
-      // let numArray = [[14, 43, 126],[34, 64, 152],[74, 109, 292],[21, 21, 43]]
-      let vigWakeUp = [61,48,76]
-      let modWakeUp = [99,74,77]
-      let ligWakeUp = [211,117,149]
-      let nonWakeUp = [44,13,30]
-
-      let vigUnrefreshed = [32,64,85]
-      let modUnrefreshed = [49,89,110]
-      let ligUnrefreshed = [124,171,181]
-      let nonUnrefreshed = [38,24,24]
 
       let v1x1 = [vigFailToSleep[0]/rowNums[0]*padw, vigWakeUp[0]/rowNums[0] * padw, vigUnrefreshed[0]/rowNums[0] * padw];
       let v1y1 = [pad,pad,pad,pad];
@@ -903,6 +946,13 @@ function gotData(incomingData) {
             return d3.ascending(d1.activityLevel, d2.activityLevel);
           })
           drawViz2();
+          viz2.selectAll('.viz2exercisers').attr('visibility', "visible")
+          // viz2.append("text")
+          //   .text("Vigorous Exercisers")
+          //   .attr("transform", "translate("+graphW/3+","+(rowNums[0]*padh)/2+")")
+          //   .attr("font-size", "40px")
+          //   .attr("fill", "#a8dda8")
+          //   .attr("font-family", "Oswald")
         });
 
         d3.select("#failToSleep").on("click", function(){
