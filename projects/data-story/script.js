@@ -119,7 +119,7 @@ function transformData(dataToTransform) {
 
 let numCol = 40,
     numRow = 25,
-    pad = 15;
+    pad = 30;
 let graph2W = graphW*0.9,
 		graph2H = graphH*0.9;
 let padw = (graph2W-pad*2)/numCol,
@@ -471,7 +471,6 @@ function gotData(incomingData) {
             node.endingX = node.x;
             node.endingY = node.y;
           });
-          
           enterView({
             selector: '.scrollingContent #page3',
             enter: function(el){
@@ -703,6 +702,14 @@ function gotData(incomingData) {
         .transition(500)
         .delay(500)
       ;
+      viz2.append("text")
+        .text("Frequency: Usually | Sometimes | Seldom")
+        .attr("transform", "translate("+(pad+2)+","+pad*0.8+")")
+        .attr("font-size", "25px")
+        .attr("fill", "#a8dda8")
+        .attr("font-family", "Oswald")
+        .attr('visibility', 'hidden')
+        .attr('class', 'viz2title')
 
       // function showFailToSleep(d){
       //   if (showFailToSleep == false) {
@@ -902,18 +909,30 @@ function gotData(incomingData) {
           d3.selectAll('.lines').remove()
           index = 0
           drawLines(index);
+          viz2.selectAll('.viz2title').attr('visibility', "visible")
+          // viz2.append("text")
+          //   .text("Frequency: Usually | Sometimes | Seldom")
+          //   .attr("transform", "translate("+pad+","+pad*0.9+")")
+          //   .attr("font-size", "25px")
+          //   .attr("fill", "#a8dda8")
+          //   .attr("font-family", "Oswald")
+          //   .attr('visibility', 'hidden')
         });
 
         d3.select("#wakeUp").on("click", function(){
           index = 1
           d3.selectAll('.lines').remove()
           drawLines(index);
+          viz2.selectAll('.viz2title').attr('visibility', "visible")
+
         });
 
         d3.select("#unfreshed").on("click", function(){
           index = 2
           d3.selectAll('.lines').remove()
           drawLines(index);
+          viz2.selectAll('.viz2title').attr('visibility', "visible")
+
         });
 
         // d3.select("#tooEarly").on("click", function(){
